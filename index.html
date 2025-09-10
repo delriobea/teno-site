@@ -2,61 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TENO</title>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --desktop-size: 8vw;
-      --tablet-size: 12vw;
-      --mobile-size: 16vw;
-    }
-
-    html, body { height: 100%; }
-
-    /* Desktop / default: revert to previous layout */
     body {
       margin: 0;
-      background: #000;
       height: 100vh;
+      background-color: black;
       display: flex;
       justify-content: center;
       align-items: center;
-      box-sizing: border-box;
-      text-rendering: optimizeLegibility;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
     }
 
     h1 {
-      color: #fff;
+      color: white;
       font-family: 'Libre Baskerville', serif;
-      font-size: var(--desktop-size);
-      letter-spacing: 0.15em;
+      font-size: 8vw; /* bigger on desktop */
+      letter-spacing: 0.15em; /* more space between letters */
       margin: 0;
       text-align: center;
-      line-height: 1.05;
     }
 
+    /* Larger text on tablets */
     @media (max-width: 768px) {
-      body {
-        height: auto;
-        min-height: 100vh;
-        min-height: 100svh;
-        min-height: 100dvh;
-        display: grid;
-        place-items: center;
-      }
       h1 {
-        font-size: var(--tablet-size);
-        letter-spacing: 0.10em;
+        font-size: 12vw;
+        letter-spacing: 0.1em; /* slightly tighter */
       }
     }
 
+    /* Even larger on small phones */
     @media (max-width: 480px) {
       h1 {
-        font-size: var(--mobile-size);
-        letter-spacing: 0.05em;
+        font-size: 16vw;
+        letter-spacing: 0.05em; /* tightest so it fits */
       }
     }
   </style>
