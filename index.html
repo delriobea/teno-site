@@ -13,14 +13,15 @@
     }
 
     html, body { height: 100%; }
+
+    /* Desktop / default: revert to previous layout */
     body {
       margin: 0;
       background: #000;
-      min-height: 100vh;
-      min-height: 100svh;
-      min-height: 100dvh;
-      display: grid;
-      place-items: center;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       box-sizing: border-box;
       text-rendering: optimizeLegibility;
       -webkit-font-smoothing: antialiased;
@@ -38,6 +39,14 @@
     }
 
     @media (max-width: 768px) {
+      body {
+        height: auto;
+        min-height: 100vh;
+        min-height: 100svh;
+        min-height: 100dvh;
+        display: grid;
+        place-items: center;
+      }
       h1 {
         font-size: var(--tablet-size);
         letter-spacing: 0.10em;
