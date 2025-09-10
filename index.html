@@ -18,9 +18,26 @@
     h1 {
       color: white;
       font-family: 'Libre Baskerville', serif;
-      font-size: 6vw; /* Scales with screen size */
-      letter-spacing: 0.05em;
+      font-size: 8vw; /* bigger on desktop */
+      letter-spacing: 0.15em; /* more space between letters */
       margin: 0;
+      text-align: center;
+    }
+
+    /* Larger text on tablets */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 12vw;
+        letter-spacing: 0.1em; /* slightly tighter */
+      }
+    }
+
+    /* Even larger on small phones */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 16vw;
+        letter-spacing: 0.05em; /* tightest so it fits */
+      }
     }
   </style>
 </head>
